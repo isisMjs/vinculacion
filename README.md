@@ -1,1 +1,1 @@
-# Vinculaci-n-
+# Vinculacion
