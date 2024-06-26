@@ -1,0 +1,45 @@
+.cont_bg {
+    background-color: #efe5e5;
+}
+
+.cont_bg_buttons {
+    background-color: #efe5e5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.navbar_bg_brow {
+    background-color: #5b5959;
+}
+
+.navbar_bg_brow_btn {
+    background-color: #5b5959;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#buttons_var {
+    background-color: #5c0a33;
+}
+
+.max-height_size {
+    max-height: 539px;
+}
+
+.max_height_size_area {
+    max-height: 200px;
+}
+
+.height_size {
+    height: 400px;
+}
+
+.hidden{
+    display: none;
+}
+
+.max_heigth_table {
+    max-height: 560px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
