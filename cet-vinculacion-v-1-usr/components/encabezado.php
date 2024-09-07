@@ -11,7 +11,7 @@
     if (strpos($url,"login.php")){
         $display_1 = "d-none";
         $display_2 = "";
-        $title = "Inicio de Sesion del Alumnado";
+        $title = "Comienza tu camino profesional";
     }
 
     if ($esta_en_pages == "../") 

@@ -4,7 +4,6 @@ const escolar = document.getElementById("personal");
 const volver = document.getElementById("volver");
 const volver2 = document.getElementById("volver2");
 const volver3 = document.getElementById("volver3");
-const imagenInput = document.getElementById("imagen");
 
 let forms = document.querySelectorAll(".needs-validation");
 let arrForm = Array.prototype.slice.call(forms);
@@ -48,7 +47,7 @@ volver3.addEventListener("click", () => {
   formularioEsc.classList.remove("hidden");
 });
 
-imagenInput.addEventListener("change", function (e) {
+/*imagenInput.addEventListener("change", function (e) {
   const file = e.target.files[0];
   const extension = ["image/jpeg", "image/jpg", "image/png"];
   const maxSize = 1023 * 1024;
@@ -72,7 +71,7 @@ imagenInput.addEventListener("change", function (e) {
 
     imagenSeleccionda.src = url;
   }
-});
+});*/
 
 let today = new Date();
 

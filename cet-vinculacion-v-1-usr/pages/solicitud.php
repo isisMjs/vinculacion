@@ -1,3 +1,25 @@
+<?php
+$usuario = explode("|", $_SESSION['usr_log']);
+$img = $usuario[0];
+$nombres = $usuario[1];
+$paterno = $usuario[2];
+$materno = $usuario[3];
+$direccion = $usuario[4];
+$noint = $usuario[5];
+$noext = $usuario[6];
+$cp = $usuario[7];
+$colonia = $usuario[8];
+$estado = $usuario[9];
+$municipio = $usuario[10];
+$telefono = $usuario[11];
+$sexo = $usuario[12];
+$especialidad = $usuario[13];
+$semestre = $usuario[14];
+$grupo = $usuario[15];
+$generacion = $usuario[16];
+$noctrl = $usuario[17];
+$curp = $usuario[18];
+?>
 <div class="cont_bg container shadow-lg rounded justify-content-center border border-1 border-light">
     <div class="row max-height_size">
 
@@ -12,7 +34,6 @@
                     <div class="col-sm-12 col-lg-3 mb-3 text-center">
                         <div>
                             <img id="imagenSeleccionda" for="imagen" src="img/user.png" class="rounded-pill mb-3" alt="Imagen actual" style="width: 150px; height: 150px;">
-                            <input type="file" class="form-control rounded-pill mt-2" id="imagen" name="imagen" accept="image/*" />
                         </div>
                     </div>
                     <div class="col-6 my-2 d d-none d-lg-block">
@@ -25,61 +46,61 @@
                     </div>
                     <div class="col-sm-6 col-lg-4">
                         <label for="nombres" class="form-label">Nombre(s): </label>
-                        <input type="text" class="form-control rounded-pill mb-3" id="nombres" name="nombres" disabled />
+                        <input type="text" class="form-control rounded-pill mb-3" id="nombres" name="nombres" value="<?php echo $nombres; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-6 col-lg-4">
                         <label for="paterno" class="form-label">Apellido Paterno:</label>
-                        <input type="text" class="form-control rounded-pill mb-3" id="paterno" name="paterno" disabled />
+                        <input type="text" class="form-control rounded-pill mb-3" id="paterno" name="paterno" value="<?php echo $paterno; ?>" disabled />
                     </div>
                     <div class="col-sm-6 col-lg-4">
                         <label for="materno" class="form-label">Apellido Materno:</label>
-                        <input type="text" class="form-control rounded-pill mb-3" id="materno" name="materno" disabled />
+                        <input type="text" class="form-control rounded-pill mb-3" id="materno" name="materno" value="<?php echo $materno; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <label for="direccion" class="form-label">Direccion:</label>
-                        <input type="text" class="form-control rounded-pill" id="direccion" name="direccion" disabled />
+                        <input type="text" class="form-control rounded-pill" id="direccion" name="direccion" value="<?php echo $direccion; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-4 col-lg-2">
                         <label for="numext" class="form-label">No. exterior:</label>
-                        <input type="text" class="form-control rounded-pill" id="numext" name="numext" maxlength="5" pattern="[0-9]{5}" disabled />
+                        <input type="text" class="form-control rounded-pill" id="numext" name="numext" maxlength="5" pattern="[0-9]{5}" value="<?php echo $noext; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-4 col-lg-2">
                         <label for="numint" class="form-label">No. interior:</label>
-                        <input type="text" class="form-control rounded-pill" id="numint" name="numint" maxlength="5" pattern="[0-9]{5}" disabled />
+                        <input type="text" class="form-control rounded-pill" id="numint" name="numint" maxlength="5" pattern="[0-9]{5}" value="<?php echo $noint; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-4 col-lg-2">
                         <label for="cp" class="form-label">C.P:</label>
-                        <input type="text" class="form-control rounded-pill" id="cp" name="cp" maxlength="6" pattern="[0-9]{6}" disabled />
+                        <input type="text" class="form-control rounded-pill" id="cp" name="cp" maxlength="6" pattern="[0-9]{6}" value="<?php echo $cp; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <label for="colonia" class="form-label">Colonia:</label>
-                        <input type="text" class="form-control rounded-pill" id="colonia" name="colonia" disabled />
+                        <input type="text" class="form-control rounded-pill" id="colonia" name="colonia" value="<?php echo $colonia; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <label for="edo" class="form-label">Estado:</label>
-                        <input class="form-control rounded-pill mb-3" type="text" id="edo" name="edo" disabled />
+                        <input class="form-control rounded-pill mb-3" type="text" id="edo" name="edo" value="<?php echo $estado; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <label for="mun" class="form-label">Municipio:</label>
-                        <input class="form-control rounded-pill mb-3" type="text" id="mun" name="mun" disabled />
+                        <input class="form-control rounded-pill mb-3" type="text" id="mun" name="mun" value="<?php echo $municipio; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <label for="telefono" class="form-label">Telefono:</label>
-                        <input class="form-control rounded-pill mb-3" type="tel" id="telefono" maxlength="10" name="telefono" pattern="[0-9]{10}" disabled />
+                        <input class="form-control rounded-pill mb-3" type="tel" id="telefono" maxlength="10" name="telefono" pattern="[0-9]{10}" value="<?php echo $telefono; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-12 col-lg-3">
                         <label for="sexo" class="form-label">Sexo:</label>
-                        <input class="form-control rounded-pill mb-3" type="text" id="sexo" maxlength="2" name="sexo" pattern="[0-9]{10}" disabled placeholder="M"/>
+                        <input class="form-control rounded-pill mb-3" type="text" id="sexo" maxlength="2" name="sexo" pattern="[0-9]{10}" value="<?php echo $sexo; ?>" disabled placeholder="M"/>
                     </div>
                     <div class="col-12 my-2 text-center">
                         <button class="btn btn-outline-primary px-2 py-1 rder border-0" title="desactivado" type="button" disabled>
@@ -98,26 +119,26 @@
                     </div>
                     <div class="col-sm-6 col-lg-8">
                         <label for="especialidad" class="form-label">Especialidad:</label>
-                        <input class="form-control rounded-pill mb-3" id="especialidad" name="especialidad" placeholder="Programación" disabled />
+                        <input class="form-control rounded-pill mb-3" id="especialidad" name="especialidad"value="<?php echo $especialidad; ?>" disabled />
                     </div>
                     <div class="col-sm-4 col-lg-4">
                         <label for="semestre" class="form-label">Semestre:</label>
-                        <input class="form-control rounded-pill mb-3" type="text" id="semestre" name="semestre" disabled />
+                        <input class="form-control rounded-pill mb-3" type="text" id="semestre" name="semestre" value="<?php echo $semestre; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-4 col-lg-4">
                         <label for="grupo" class="form-label">Grupo:</label>
-                        <input class="form-control rounded-pill mb-3" type="text" id="grupo" name="grupo" disabled />
+                        <input class="form-control rounded-pill mb-3" type="text" id="grupo" name="grupo" value="<?php echo $grupo; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-4 col-lg-4">
                         <label for="generacion" class="form-label">Generacion:</label>
-                        <input class="form-control rounded-pill mb-3" type="text" id="generacion" name="generacion" disabled />
+                        <input class="form-control rounded-pill mb-3" type="text" id="generacion" name="generacion" value="<?php echo $generacion; ?>" disabled />
                         
                     </div>
                     <div class="col-sm-6 col-lg-4">
                         <label for="noctrl" class="form-label">No. ctrl:</label>
-                        <input type="text" class="form-control rounded-pill mb-3" id="noctrl" name="noctrl" maxlength="18" pattern="[0-9]{18}" disabled />
+                        <input type="text" class="form-control rounded-pill mb-3" id="noctrl" name="noctrl" maxlength="18" pattern="[0-9]{18}" value="<?php echo $noctrl; ?>" disabled />
                     </div>
                 </div>
                 <div class="row mt-lg-4">

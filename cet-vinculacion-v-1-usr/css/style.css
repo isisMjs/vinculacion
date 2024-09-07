@@ -43,3 +43,7 @@
     overflow-y: scroll;
     scrollbar-width: none;
 }
+.gui{
+    background: #5c0a33;
+    color: aliceblue;
+}
