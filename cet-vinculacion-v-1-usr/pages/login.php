@@ -43,11 +43,9 @@
                     </button>
                 </div>
                 <div class="modal-body d-flex align-items-center">
-                    <!-- Flex container for image and text -->
                     <img src="../img/notfound.jpg" class="rounded-pill mb-3" alt="Usuario no encontrado"
                         style="width: 150px; height: 150px;">
                     <div class="ms-3">
-                        <!-- Added margin to separate text from image -->
                         <h5 class="modal-title fs-2 fw-bold text-danger" id="errorModalLabel">Error</h5>
                         <p>No hay información del alumno. Revisa tus datos o acude al departamento de vinculación para
                             más información.</p>
@@ -97,13 +95,11 @@
                             </div>
                         </div>
                     </div>
-
                 </form>
             </div>
-
         </div>
     </div>
-
+    <script src="../components/js.js"></script>
     <script src="../js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

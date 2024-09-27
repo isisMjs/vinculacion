@@ -4,20 +4,16 @@ const escolar = document.getElementById("personal");
 const volver = document.getElementById("volver");
 const volver2 = document.getElementById("volver2");
 const volver3 = document.getElementById("volver3");
+const enviar = document.getElementById("btn");
+let enviado = 0;
 
 let forms = document.querySelectorAll(".needs-validation");
 let arrForm = Array.prototype.slice.call(forms);
 
-let btn = document.getElementById("btn-press");
-
-btn.addEventListener("click", (e)=>{
-    e.preventDefault();
-
-    location.href = "pages/login.php";
-});
-
 arrForm.forEach(function (form) {
-  form.addEventListener("submit",function (event) {
+  form.addEventListener(
+    "submit",
+    function (event) {
       event.preventDefault();
       if (!form.checkValidity()) {
         event.stopPropagation();
@@ -33,7 +29,8 @@ arrForm.forEach(function (form) {
           formularioEsc.classList.add("hidden");
         }
       }
-    }, false
+    },
+    false
   );
 });
 
@@ -79,10 +76,10 @@ let yyyy = today.getFullYear();
 let mm = today.getMonth() + 1;
 let dd = today.getDate();
 if (mm < 10) {
-  mm = '0' + mm;
+  mm = "0" + mm;
 }
 if (dd < 10) {
-  dd = '0' + dd;
+  dd = "0" + dd;
 }
 let formattedDate = yyyy + "-" + mm + "-" + dd;
 
@@ -91,26 +88,27 @@ document.getElementById("fechaEnvio").value = formattedDate;
 formularioEmp.addEventListener("submit", (e) => {
   e.preventDefault();
   document.getElementById("fechaEnvio").disabled = false;
+  enviado=1;
   enviarDatos();
   document.getElementById("fechaEnvio").disabled = true;
 });
 
 function enviarDatos() {
-
-  
-  fetch('conexion/insert.php', {
-    method: 'POST'
+  fetch("conexion/insert.php", {
+    method: "POST",
   })
-    .then(reponse => reponse.json())
-    .then(data => {
-        
-        alert(data[0].clave);
+    .then((reponse) => reponse.json())
+    .then((data) => {
+      alert(data[0].clave);
 
-        alert(data[0].mensaje);
+      alert(data[0].mensaje);
 
-        alert("cuando su solicitud, sea aceptada por la Lic. Nadia, podra acceder a los reportes.");
+      alert(
+        "cuando su solicitud, sea aceptada por la Lic. Nadia, podra acceder a los reportes."
+      );
     })
-    .catch(error => {
-      console.log ('Error en la conexión con el servidor: ' +  error);
+    .catch((error) => {
+      location.href="conexion/insert.php"
+      console.log("Error en la conexión con el servidor: " + error);
     });
 }

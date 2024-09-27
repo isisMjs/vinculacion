@@ -1,0 +1,13 @@
+const cerrar = document.getElementById("btn-press");
+const notificaciones = document.getElementById("btn-noti");
+
+notificaciones.addEventListener("click", ()=>{
+       location.href = "../pages/notificaciones.php";
+});
+cerrar.addEventListener("click", (e) => {
+  fetch("../php/close.php", {
+    method: "POST",
+  }).then((response) => {
+    location.href = "../../index.php";
+  });
+});

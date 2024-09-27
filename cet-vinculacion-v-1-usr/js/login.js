@@ -9,7 +9,6 @@ function showErrorModal() {
 }
 
 form.addEventListener("submit", (e) => {
-    // Prevenir el envío del formulario si hay errores de validación
     if (!form.checkValidity()) {
         e.preventDefault();
         e.stopPropagation();
@@ -48,9 +47,9 @@ noctrlInput.addEventListener('input', function (e) {
     const newValue = value.replace(/[^0-9]/g, '');
 
     if (newValue !== value) {
-        input.value = newValue; // Actualizar el valor del campo de entrada
+        input.value = newValue; 
         errorContainer.textContent = 'Solo se permiten números.';
     } else {
-        errorContainer.textContent = 'El numero de control debe tener 14 digitos'; // Limpiar el mensaje de error
+        errorContainer.textContent = 'El numero de control debe tener 14 digitos'; 
     }
 });

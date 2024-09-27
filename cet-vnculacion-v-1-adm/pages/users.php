@@ -24,7 +24,7 @@
     <body>
         <?php require("../components/encabezado.php"); ?>
 
-        <div class="container shadow-lg bg-light">
+        <div class="container shadow-lg bg-light mt-5">
 
             <div class="row rounded navbar_bg_brow">
                 <div class="col-4 col-md-2 col-lg-1 text-center cont_bg_buttons border border-dark border-bottom-0">
@@ -63,7 +63,7 @@
                 </table>
             </div>
         </div>   
-
+        <script src="../js/close.js"></script>
         <script src="../js/users.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

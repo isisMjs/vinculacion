@@ -47,6 +47,7 @@ if (isset($_POST['curp']) && isset($_POST['noctrl'])) {
             'noctrl' => $row['noctrl'],
             'curp' => $row['curp']
          );  
+         $_SESSION['usr_id'] = $row['id'];
          $_SESSION['usr_log'] = $row['img']. "|".$row['nombres']. "|".$row['paterno']. "|".$row['materno']. "|".$row['direccion']. "|".$row['noint']. "|".$row['noext']. "|".$row['cp']. "|".$row['colonia']
          . "|".$row['estado']. "|".$row['municipio']. "|".$row['telefono']. "|".$row['sexo']. "|".$row['especialidad']. "|".$row['semestre']. "|".$row['grupo']. "|".$row['generacion']
          . "|".$row['noctrl']. "|".$row['curp'];

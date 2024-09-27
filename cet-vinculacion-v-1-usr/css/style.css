@@ -47,3 +47,18 @@
     background: #5c0a33;
     color: aliceblue;
 }
+#row-container {
+    max-height: 200px; /* adjust the height to show only a few rows by default */
+    overflow-y: hidden;
+    transition: max-height 0.5s;
+  }
+  
+  #row-container.expanded {
+    max-height: none;
+  }
+  
+  .truncated {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+  }

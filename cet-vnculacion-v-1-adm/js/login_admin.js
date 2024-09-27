@@ -1,27 +1,35 @@
-let btn = document.getElementById("btn-press");
 let form_admin = document.getElementById("form_admin");
 
-btn.addEventListener("click", (e)=>{
+function showErrorModal() {
+    let modal = new bootstrap.Modal(document.getElementById('errorModal'));
+    modal.show();
+}
+
+form_admin.addEventListener("submit", (e) => {
+    if (!form_admin.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+        form_admin.classList.add("was-validated");
+        return;
+    }
+
     e.preventDefault();
 
-    location.href = "../pages/login.php";
-});
+    let datos = new FormData(form_admin);
 
-form_admin.addEventListener("submit", (e)=>{
-    e.preventDefault();
-
-    let data = new FormData(form_admin);
-
-    fetch('../php/login_admin_db.php',{
+    fetch('../php/login_admin_db.php', {
         method: "POST",
-        body: data
+        body: datos,
     })
-        .then(datas => datas.json)
-        .then(datos => {
+    .then((response) => response.json())
+    .then((data) => {
+        if (data[0].clave === "ok") {
             location.href = "../index.php";
+          } else {
+           showErrorModal();
+          }
         })
         .catch(error => {
-            alert (error);
-        })
-    
+            alert("Error: " + error);
+        });
 });

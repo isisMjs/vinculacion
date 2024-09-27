@@ -20,7 +20,7 @@ $generacion = $usuario[16];
 $noctrl = $usuario[17];
 $curp = $usuario[18];
 ?>
-<div class="cont_bg container shadow-lg rounded justify-content-center border border-1 border-light">
+<div class="cont_bg container shadow-lg rounded justify-content-center mt-4">
     <div class="row max-height_size">
 
         <div class="col-12 my-2 d d-block d-lg-none">
@@ -28,7 +28,7 @@ $curp = $usuario[18];
                 <h4 class="text-center">1.-Datos personales</h4>
         </div>
 
-        <div class="col-12 col-lg-12 ">
+        <div class="col-12 col-lg-12">
             <form id="personal" name="personal" class="ms-3 needs-validation" novalidate disabled>
                 <div class="row mt-lg-4">
                     <div class="col-sm-12 col-lg-3 mb-3 text-center">
